@@ -8,7 +8,6 @@ import connectMongo from "../../utils/db"
 
 export default async function handler(req, res) {
   await connectMongo()
-  console.log('mongo connect')
   res.status(200).json({ message: "Hello" })
 }
 
