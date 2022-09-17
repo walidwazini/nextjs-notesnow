@@ -38,6 +38,8 @@ const task = asyncHandler(async (req, res) => {
       } catch (err) {
         return res.status(400).json(err)
       }
+    default:
+      return res.status(400).json({ msg: 'this method si not supported.' })
   }
 })
 
